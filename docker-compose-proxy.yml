@@ -1,0 +1,25 @@
+version: '3'
+services:
+  postgres_db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+  rails:
+    build: .
+    command: bundle exec rails s -p 80 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres_db
+    expose:
+      - 80
+      - 3035
+    environment:
+      - VIRTUAL_HOST=r5.ak-ai.com
+      - LETSENCRYPT_HOST=r5.ak-ai.com
+      - LETSENCRYPT_EMAIL=mail@kairautenberg.de
+networks:
+  default:
+    external:
+      name: nprox
+
