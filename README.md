@@ -1,5 +1,24 @@
-# docker rails5.2 node-9
-setup files for docker rails howto https://docs.docker.com/compose/rails/
+# README
 
-including setup for npm and yarn
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
